@@ -1,0 +1,18 @@
+<resources>
+    // Strings for the app
+    <string name="app_name">RecordBox</string>
+    <string name="record_string">Record</string>
+    <string name="box_string">Box</string>
+
+    //string use for search page
+    <string name="example_search"></string>
+    <string name="search">Search</string>
+    <string name="no_result">No results</string>
+
+    // String will be use to store name of artist,albums name, song name
+    <string name="Artist"></string>
+    <string name="Song"></string>
+    <string name="Album"></string>
+
+
+</resources>
