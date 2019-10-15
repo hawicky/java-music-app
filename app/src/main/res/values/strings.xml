@@ -15,4 +15,14 @@
     <string name="Album"></string>
 
 
+    // Navigation content description
+    <string name="btnImg_Home">Home Button</string>
+    <string name="btnImg_Magnifying">Search Button</string>
+    <string name="btnImg_ContactUs">Contact us Button</string>
+
+    // Home Page content description and Text
+    <string name="btnImg_logo_play_">Logo Play Button</string>
+    <string name="My_">My</string>
+    <string name="MyAlbum">albums</string>
+
 </resources>
