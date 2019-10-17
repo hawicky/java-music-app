@@ -94,7 +94,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:padding="20dp"
-            app:srcCompat="@drawable/add_icon" />
+            app:srcCompat="@drawable/add_icon"
+            tools:contentDescription="@string/discrtion_add_btn" />
     </LinearLayout>
 
     <View
