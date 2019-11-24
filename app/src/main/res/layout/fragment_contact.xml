@@ -7,45 +7,6 @@
     android:background="@android:color/transparent"
     tools:context=".album">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="50dp"
-        android:background="@color/BackgroundColor"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="@dimen/nav_icon_size_width"
-            android:layout_height="@dimen/nav_icon_size_height"
-            android:layout_weight="1"
-            android:contentDescription="@string/btnImg_Home"
-            app:srcCompat="@drawable/house"
-            tools:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="@dimen/nav_icon_size_width"
-            android:layout_height="@dimen/nav_icon_size_height"
-            android:layout_weight="1"
-            android:contentDescription="@string/btnImg_Magnifying"
-            app:srcCompat="@drawable/magnifying_glass"
-            tools:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="@dimen/nav_icon_size_width"
-            android:layout_height="@dimen/nav_icon_size_height"
-            android:layout_weight="1"
-            android:contentDescription="@string/btnImg_ContactUs"
-            app:srcCompat="@drawable/comntact_us"
-            tools:layout_weight="1" />
-    </LinearLayout>
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

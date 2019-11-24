@@ -37,4 +37,10 @@
     // Back Arrow Description
     <string name="arrow_description">Back Arrow</string>
 
+
+    // Navigation string
+    <string name="homeNav">Home</string>
+    <string name="searchNav">Search</string>
+    <string name="contactUs">Contact Us</string>
+
 </resources>
