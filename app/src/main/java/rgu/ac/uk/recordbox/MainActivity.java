@@ -3,6 +3,9 @@ package rgu.ac.uk.recordbox;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,13 +19,26 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    ArrayList<String> mAlbumNames;
+    ArrayList<String> mArtistNames;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        mAlbumNames = new ArrayList<>();
+        mArtistNames = new ArrayList<>();
+
 
         //Logo Text colorSpan
         //select the word box and make it orange
@@ -36,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, new home_frag()).commit();
+
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -43,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
+
+
                     switch (item.getItemId()){
                         case R.id.home_nav:
                             selectedFragment = new home_frag();
@@ -54,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new contact_frag();
                             break;
                     }
+
+
                     getSupportFragmentManager().beginTransaction().replace(R.id.frag_container,
                             selectedFragment).commit();
 
@@ -61,6 +83,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+
+    private void initAlbum() {
+        mAlbumNames.add("One");
+        mAlbumNames.add("Two");
+        mAlbumNames.add("Three");
+
+        mArtistNames.add("The Killer");
+        mArtistNames.add("Arctic Monekys");
+        mArtistNames.add("Three Doors Down");
+
+        initRecyclerView();
+    }
+
+
+    private void initRecyclerView(){
+//        recyclerView = findViewById(R.id.recyclerView);
+//        RecyclerViewAdapter adapter = new RecyclerViewAdapter(mAlbumNames,mArtistNames);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this  ));
+//        recyclerView.setAdapter(adapter);
+
+
+    }
 
 
 }
