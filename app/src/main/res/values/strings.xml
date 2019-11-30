@@ -43,4 +43,10 @@
     <string name="searchNav">Search</string>
     <string name="contactUs">Contact Us</string>
 
+    // Email information
+    <string name="email_subject">RecordBox Enquiry</string>
+    <string name="no_email_app">You do not have an email app installed</string>
+    <string name="emailMessage"><![CDATA[%s<br><br>%s);]]></string>
+
+
 </resources>
