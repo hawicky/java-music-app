@@ -18,8 +18,10 @@ import androidx.fragment.app.Fragment;
 
 import rgu.ac.uk.recordbox.R;
 
+//create contact frag class that will inherit from Fragment superclass and implements Viewclick listener
 public class contact_frag extends Fragment implements View.OnClickListener
 {
+    //placeholder for a button that can be used in the entire scope of activity
     private Button send_button;
 
     @Nullable
