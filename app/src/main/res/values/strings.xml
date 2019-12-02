@@ -13,6 +13,8 @@
     <string name="Contact">Contact Us!</string>
     <string name="name_hint">Enter your name</string>
     <string name="Thanks">Thank you for contacting RecordBox.</string>
+    <string name="Message">Message</string>
+    <string name="Send">Send!</string>
 
     // String will be use to store name of artist,albums name, song name
     <string name="Artist"></string>
