@@ -9,6 +9,11 @@
     <string name="search">Search</string>
     <string name="no_result">No results</string>
 
+    //Strings for contact page
+    <string name="Contact">Contact Us!</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="Thanks">Thank you for contacting RecordBox.</string>
+
     // String will be use to store name of artist,albums name, song name
     <string name="Artist"></string>
     <string name="Song"></string>
@@ -44,9 +49,11 @@
     <string name="contactUs">Contact Us</string>
 
     // Email information
-    <string name="email_subject">RecordBox: User Message</string>
+    <string name="email_subject">%s</string>
     <string name="no_email_app">No email application installed!</string>
-    <string name="emailMessage"><![CDATA[%s<br><br>%s);]]></string>
+    <string name="emailMessage"><![CDATA[%s<br><br>%s]]></string>
+    <string name="subject">Subject</string>
+    <string name="email_address">Email Address</string>
 
 
 </resources>

@@ -44,9 +44,13 @@ public class contact_frag extends Fragment implements View.OnClickListener
             EditText nameBox = getView().findViewById(R.id.nameBox);
             String name = nameBox.getText().toString();
 
-            // Get the persons email from the message box on contact page
-            EditText emailBox = getView().findViewById(R.id.emailBox);
-            String email = emailBox.getText().toString();
+            // Get the email text
+            EditText emailTextView = getView().findViewById(R.id.emailText);
+            String email = emailTextView.getText().toString();
+
+            // Get the subject text
+            EditText subjectTextView = getView().findViewById(R.id.subjectText);
+            String subject = subjectTextView.getText().toString();
 
             // Get the persons message from the message box on contact page
             EditText messageBox = getView().findViewById(R.id.messageBox);
@@ -56,13 +60,13 @@ public class contact_frag extends Fragment implements View.OnClickListener
             message = message.substring(0, 1).toUpperCase() + message.substring(1).toLowerCase();
 
             // Create an email intent to open external email app
-            //Fill in the to adress to the teams own email
+            //Fill in the to address to the teams own email
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "team14coursework@gmail.com", null));
             emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, email);
             //Convert users name to uppercase
             emailIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(getString(R.string.emailMessage,message,name.toUpperCase())));
             //Set the subject to variable email subject
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject, subject));
 
             PackageManager packageManager = getActivity().getPackageManager();
             boolean isIntentSafe = emailIntent.resolveActivity(packageManager) != null;
@@ -70,9 +74,10 @@ public class contact_frag extends Fragment implements View.OnClickListener
             // Start the email app if it is safe
             if (isIntentSafe)
                 startActivity(emailIntent);
-            //Tell user via a toast that no email app is installed
+                //Tell user via a toast that no email app is installed
             else
                 Toast.makeText(getActivity(), getString(R.string.no_email_app), Toast.LENGTH_SHORT).show();
+
         }
     }
 }
