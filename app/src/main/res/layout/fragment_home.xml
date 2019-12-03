@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
 
 
@@ -15,6 +16,7 @@
         android:adjustViewBounds="true"
         android:background="#00FFFFFF"
         android:contentDescription="@string/btnImg_logo_play_"
+        android:layout_centerHorizontal="true"
         android:padding="20dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +24,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_transparent" />
+
+    <TextView
+        android:id="@+id/recyclerViewTitle"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_below="@+id/imageButton2"
+        android:textSize="20dp"
+        android:text="Your Albums" />
+
+    <ImageButton
+        android:id="@+id/addAlbum"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_below="@+id/imageButton2"
+        android:src="@drawable/add_icon"
+        android:scaleType="fitXY"
+        android:layout_toRightOf="@id/recyclerViewTitle"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="550dp"
+        android:layout_below="@+id/recyclerViewTitle"
+        android:background="@android:color/background_light"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+
+        />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -35,30 +67,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="0"
-            android:text="@string/My_" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/MyAlbum"
-            android:textColor="@color/colorOrange" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:padding="20dp"
-            app:srcCompat="@drawable/add_icon"
-            tools:contentDescription="@string/discrtion_add_btn" />
     </LinearLayout>
 
     <View
@@ -70,13 +80,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="384dp"
-        android:layout_height="367dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>
+
