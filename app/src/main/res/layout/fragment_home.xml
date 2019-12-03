@@ -31,11 +31,12 @@
         android:layout_height="50dp"
         android:padding="10dp"
         android:layout_below="@+id/imageButton2"
-        android:textSize="20dp"
-        android:text="Your Albums" />
+        android:textSize="20sp"
+        android:text="@string/myAlbums"/>
 
     <ImageButton
         android:id="@+id/addAlbum"
+        android:contentDescription="@string/btnImg_Add"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:padding="10dp"

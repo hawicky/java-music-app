@@ -4,10 +4,15 @@
     <string name="record_string">Record</string>
     <string name="box_string">Box</string>
 
+    //string use for home page
+    <string name = "myAlbums">My Albums</string>
+
     //string use for search page
     <string name="example_search"></string>
     <string name="search">Search</string>
     <string name="no_result">No results</string>
+
+
 
     //Strings for contact page
     <string name="Contact">Contact Us!</string>
@@ -29,6 +34,7 @@
 
     // Home Page content description and Text
     <string name="btnImg_logo_play_">Logo Play Button</string>
+    <string name="btnImg_Add">Add Button</string>
     <string name="My_">My</string>
     <string name="MyAlbum">albums</string>
     <string name="aArtist">Artist</string>
