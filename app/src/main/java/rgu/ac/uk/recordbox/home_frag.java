@@ -1,5 +1,6 @@
 package rgu.ac.uk.recordbox;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +30,8 @@ public class home_frag extends Fragment {
 
 
         //recycler view
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Post Malone", "Stoney"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "21 Savage", "Issa Album"));
+        //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Post Malone", "Stoney"));
+        //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "21 Savage", "Issa Album"));
        /* exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Twenty One Pilots", "Trench"));
         exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Ed Sheeran", "X"));
         exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 9", "Line 6"));
@@ -39,15 +40,24 @@ public class home_frag extends Fragment {
         exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
         exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
         */
-       exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
+       //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
 
-        mRecyclerView = rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mAdapter = new ExampleAdapter(exampleList);
+        //mRecyclerView = rootView.findViewById(R.id.recyclerView);
+        //mRecyclerView.setHasFixedSize(true);
+        //mLayoutManager = new LinearLayoutManager(getContext());
+        //mAdapter = new ExampleAdapter(exampleList);
 
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
+        //mRecyclerView.setLayoutManager(mLayoutManager);
+        //mRecyclerView.setAdapter(mAdapter);
+
+
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+
+        RecyclerViewAdapter2 adapter = new RecyclerViewAdapter2();
+        recyclerView.setAdapter(adapter);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
         return rootView;
     }
+
 }

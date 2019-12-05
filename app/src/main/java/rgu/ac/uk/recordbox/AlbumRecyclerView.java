@@ -20,4 +20,6 @@ public class AlbumRecyclerView {
     public String getText2 () {
         return mText2;
     }
+
+
 }

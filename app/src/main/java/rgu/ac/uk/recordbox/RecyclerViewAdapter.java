@@ -58,7 +58,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
                     String artist = mArtistNameText.getText().toString();
                     Log.d("Song", song);
                     Log.d("Artist", artist);
-                    home_frag.exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, song, artist));
+                    OurData2.albumT.add(song);
+                    OurData2.artistN.add(artist);
+
+                    //home_frag.exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, song, artist));
 
 
                     //String entries = String.valueOf(home_frag.exampleList.size());
