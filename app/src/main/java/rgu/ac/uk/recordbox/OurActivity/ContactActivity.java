@@ -47,17 +47,20 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
         send_button = (Button) findViewById(R.id.button);
         send_button.setOnClickListener(this);
 
+        //Finds state of switch and value of the namebox
         final Switch switchButton = findViewById(R.id.nameSave);
         final TextView nameBox = findViewById(R.id.nameBox);
 
+        //opens shared preffernces and enters the name into the name box
         SharedPreferences sp = this.getSharedPreferences("contactname", MODE_PRIVATE);
         String sharedPrefName = sp.getString("name", "");
         String sharedPrefSwitch = sp.getString("switch", "");
 
 
         nameBox.setText(sharedPrefName);
-
+        //Checks if sharedprefrences is empty
         if(!sharedPrefSwitch.equals("")){
+            //
             switchButton.setChecked(true);
         }
         else {
