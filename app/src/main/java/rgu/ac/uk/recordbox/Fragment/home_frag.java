@@ -1,6 +1,5 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+
+import rgu.ac.uk.recordbox.Adapter.RecyclerViewAdapter2;
+import rgu.ac.uk.recordbox.R;
+import rgu.ac.uk.recordbox.RecycleView.AlbumRecyclerView;
 
 public class home_frag extends Fragment {
     private RecyclerView mRecyclerView;

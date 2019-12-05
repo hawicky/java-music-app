@@ -1,4 +1,4 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import rgu.ac.uk.recordbox.RecycleView.AlbumRecyclerView;
+import rgu.ac.uk.recordbox.R;
 
 public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleViewHolder> {
     private ArrayList<AlbumRecyclerView> mRecyclerList;

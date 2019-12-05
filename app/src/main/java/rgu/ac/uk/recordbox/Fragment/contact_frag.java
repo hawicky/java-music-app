@@ -1,4 +1,4 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.Fragment;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -31,18 +31,19 @@ import static android.content.Context.MODE_PRIVATE;
 public class contact_frag extends Fragment implements View.OnClickListener
 {
     //placeholder for a button that can be used in the entire scope of activity
-    private Button send_button;
+    private Button send_button = null;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_contact, container, false);
-        send_button = v.findViewById(R.id.button);
-        send_button.setOnClickListener(this);
+        //send_button = (Button) v.findViewById(R.id.button);
+        Button send_button = (Button) v.findViewById(R.id.button);
+        //send_button.setOnClickListener(this);
 
-        final Switch switchButton = getView().findViewById(R.id.nameSave);
-        final TextView nameBox = getView().findViewById(R.id.nameBox);
+          final Switch switchButton = getView().findViewById(R.id.nameSave);
+          final TextView nameBox = getView().findViewById(R.id.nameBox);
 
         SharedPreferences sp = this.getActivity().getSharedPreferences("contactname", MODE_PRIVATE);
         String sharedPrefName = sp.getString("name", "");

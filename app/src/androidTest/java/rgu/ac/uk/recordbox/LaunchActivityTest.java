@@ -9,8 +9,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import rgu.ac.uk.recordbox.OurActivity.MainActivity;
+
 @RunWith(AndroidJUnit4.class)
-public class NavigationTest {
+public class LaunchActivityTest {
 
     @Rule
     public ActivityTestRule<MainActivity> activityTestRule =
@@ -23,7 +25,9 @@ public class NavigationTest {
     }
 
     @Test
-    public void CreateNewFragmentView () {}
+    public void CreateNewFragmentView () {
+
+    }
 
 
 }

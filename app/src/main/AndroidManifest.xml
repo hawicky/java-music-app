@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="rgu.ac.uk.recordbox">
-
-    <!--    Enable User Internet permission-->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Enable User Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".contact" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".OurActivity.ContactActivity"
+            android:parentActivityName=".OurActivity.MainActivity"></activity>
+
+        <activity android:name=".OurActivity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

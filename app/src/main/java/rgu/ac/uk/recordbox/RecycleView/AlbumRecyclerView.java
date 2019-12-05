@@ -1,4 +1,4 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.RecycleView;
 
 public class AlbumRecyclerView {
     private int mImageResource;

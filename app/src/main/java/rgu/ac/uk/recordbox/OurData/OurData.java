@@ -1,10 +1,9 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.OurData;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class OurData2 {
+public class OurData {
 
 
     public static ArrayList<String> albumT = new ArrayList<>(Arrays.asList("Baby", "Get Lucky", "No Freedom"));

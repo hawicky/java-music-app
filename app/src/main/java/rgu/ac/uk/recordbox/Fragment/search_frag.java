@@ -1,4 +1,4 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import rgu.ac.uk.recordbox.Adapter.RecyclerViewAdapter;
+import rgu.ac.uk.recordbox.OurActivity.MainActivity;
+import rgu.ac.uk.recordbox.R;
 
 public class search_frag extends Fragment {
 

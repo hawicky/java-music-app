@@ -5,13 +5,12 @@
     <string name="box_string">Box</string>
 
     //string use for home page
-    <string name = "myAlbums">My Albums</string>
+    <string name="myAlbums">My Albums</string>
 
     //string use for search page
     <string name="example_search"></string>
     <string name="search">Search</string>
     <string name="no_result">No results</string>
-
 
 
     //Strings for contact page
@@ -62,6 +61,10 @@
     <string name="emailMessage"><![CDATA[%s<br><br>%s]]></string>
     <string name="subject">Subject</string>
     <string name="email_address">Email Address</string>
+
+
+    // Shared Data
+    <string name="name">James</string>
 
 
 </resources>

@@ -1,4 +1,4 @@
-package rgu.ac.uk.recordbox;
+package rgu.ac.uk.recordbox.OurActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +8,7 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,8 +34,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import rgu.ac.uk.recordbox.Fragment.home_frag;
+import rgu.ac.uk.recordbox.Fragment.search_frag;
+import rgu.ac.uk.recordbox.OurData.OurData;
+import rgu.ac.uk.recordbox.R;
 import rgu.ac.uk.recordbox.jsonObjects.Items;
-import rgu.ac.uk.recordbox.jsonObjects.artistName;
 
 //volley
 //spotify
@@ -69,6 +73,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //intent to open search_activity
+        BottomNavigationView navigationInt = (BottomNavigationView) findViewById(R.id.bottom_nav);
+        View view = navigationInt.findViewById(R.id.contact_Nav);
+        //view.performClick();
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OpenActivity();
+            }
+        });
+
+
+
+
+
         mAlbumNames = new ArrayList<>();
         mArtistNames = new ArrayList<>();
 
@@ -91,6 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void OpenActivity (){
+        Intent kampIntent = new Intent(this, ContactActivity.class);
+        startActivity(kampIntent);
+    }
+
+
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -104,9 +132,6 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case R.id.search_nav:
                             selectedFragment = new search_frag();
-                            break;
-                        case R.id.contact_Nav:
-                            selectedFragment = new contact_frag();
                             break;
                     }
 
@@ -274,5 +299,18 @@ public class MainActivity extends AppCompatActivity {
 
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
     }
+//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+//
+//        @Override
+//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//            switch (item.getItemId()) {
+//                case R.id.contact_Nav:
+//                    Intent kampIntent = new Intent(MainActivity.this, ContactActivity.class);
+//                    startActivity(kampIntent);
+//                    break;
+//            }
+//            return false;
+//        }
+//    };
 
 }
