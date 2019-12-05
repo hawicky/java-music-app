@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String REDIRECT_URI = "http://localhost:4002/";
     private static final int REQUEST_CODE = 1337;
 
+    public static String searchContent = "Justin Bieber"; //string to be used by search bar
+
     // Local Storage
     private SharedPreferences.Editor editor;
 
@@ -154,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
 
                     //url with request
-                    String searchContent = "Justin Bieber"; //string to be used by search bar
                     searchContent = searchContent.replaceAll("\\s+", "+");
                     Log.d("REPLACEMENT", searchContent);
 
@@ -200,13 +201,24 @@ public class MainActivity extends AppCompatActivity {
                                     Log.d("REQUEST3", artistName);
 
                                     //automated output
+                                    OurData.albumT.clear();
+                                    OurData.artistN.clear();
                                     for(Items it: allItemsData){
-                                        for(artistName artName : it.allArtistName){
-                                            String songN = it.name;
-                                            String artistN = artName.name;
-                                            String result = "Song: " + songN + " Artist: " + artistN;
-                                            Log.d("FINAL", result);
-                                        }
+                                        String songN = it.name;
+                                        String artistN = it.allArtistName.get(0).name;
+                                        String result = "Song: " + songN + " Artist: " + artistN;
+                                        Log.d("FINAL", result);
+                                        //OurData.artistN.clear();
+                                        OurData.artistN.add(artistN);
+                                        OurData.albumT.add(songN);
+
+                                        //iterating through all artists (optional for future implementation)
+                                        //for(artistName artName : it.allArtistName){
+                                            //String songN = it.name;
+                                            //String artistN = artName.name;
+                                            //String result = "Song: " + songN + " Artist: " + artistN;
+                                            //Log.d("FINAL", result);
+                                        //}
                                     }
 
 

@@ -31,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return OurData.albumTitle.length;
+        return OurData.albumT.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -50,8 +50,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
         }
 
         public void bindView(int position){
-            mAlbumText.setText(OurData.albumTitle[position]);
-            mArtistNameText.setText(OurData.artistName[position]);
+            //mAlbumText.setText(OurData.albumTitle[position]);
+            //mArtistNameText.setText(OurData.artistName[position]);
+            mAlbumText.setText(OurData.albumT.get(position));
+            mArtistNameText.setText(OurData.artistN.get(position));
         }
 
         public void onClick(View view){
