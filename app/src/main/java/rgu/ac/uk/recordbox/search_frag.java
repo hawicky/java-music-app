@@ -1,9 +1,13 @@
 package rgu.ac.uk.recordbox;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +21,11 @@ public class search_frag extends Fragment {
 
     ArrayList<String> mAlbumNames;
     ArrayList<String> mArtistNames;
+
+    //input fields
+    String searchValue;
+    EditText searchInput;
+    Button submitButton;
 
     @Nullable
     @Override
@@ -34,6 +43,33 @@ public class search_frag extends Fragment {
 
         return view;
     }
+
+    //WORKING USER INPUT HANDLER
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        //intent to access mainactivity
+        final Intent intent= new Intent(view.getContext(), MainActivity.class);
+
+
+
+
+        searchInput = (EditText) getActivity().findViewById(R.id.searchKey);
+        submitButton = (Button) getActivity().findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                //Handling users input
+                searchValue = (String) searchInput.getText().toString();
+                Log.d("submitString", searchValue);
+                MainActivity.searchContent = searchValue;
+                getActivity().startActivity(intent);
+            }
+        });
+        //attempt to move spotify content
+    }
+
 
 
 
