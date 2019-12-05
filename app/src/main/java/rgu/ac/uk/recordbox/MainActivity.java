@@ -157,6 +157,9 @@ public class MainActivity extends AppCompatActivity {
 
                     //url with request
                     searchContent = searchContent.replaceAll("\\s+", "+");
+                    if(searchContent.equals("+")){
+                        searchContent = "song";
+                    }
                     Log.d("REPLACEMENT", searchContent);
 
 
@@ -201,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
                                     Log.d("REQUEST3", artistName);
 
                                     //automated output
+                                    //clearing display
                                     OurData.albumT.clear();
                                     OurData.artistN.clear();
                                     for(Items it: allItemsData){
