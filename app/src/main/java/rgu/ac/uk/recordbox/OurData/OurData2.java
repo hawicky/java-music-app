@@ -3,7 +3,7 @@ package rgu.ac.uk.recordbox.OurData;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class OurData {
+public class OurData2 {
 
 
     public static ArrayList<String> albumT = new ArrayList<>(Arrays.asList("Baby", "Get Lucky", "No Freedom"));
