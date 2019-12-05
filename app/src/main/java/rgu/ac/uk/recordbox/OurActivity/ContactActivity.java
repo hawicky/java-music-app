@@ -32,7 +32,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_contact);
 
         //Logo Text colorSpan
         //select the word box and make it orange

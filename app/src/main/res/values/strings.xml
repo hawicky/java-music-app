@@ -19,6 +19,7 @@
     <string name="Thanks">Thank you for contacting RecordBox.</string>
     <string name="Message">Message</string>
     <string name="Send">Send!</string>
+    <string name="Remember">Remember Me?</string>
 
     // String will be use to store name of artist,albums name, song name
     <string name="Artist"></string>
