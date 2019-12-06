@@ -33,27 +33,28 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityBottomNavTest {
+
+    //create rule to get main activity
     @Rule
     public final ActivityTestRule<MainActivity> activityTestRule  = new ActivityTestRule<>(MainActivity.class);
 
 
-
+    //Get item id from resource
     private static final int[] MENU_CONTENT_ITEM_ID = {
             R.id.home_nav,R.id.search_nav,R.id.contact_Nav
     };
 
+    // define map and Bottom Nav view
     private Map<Integer,String> menuStringContent;
     private BottomNavigationView bottomNavigation;
 
     @Before
     public void setUP() throws Exception {
+        //Before get the main activity and resources file
+        //Put Item Id and resource string in Map
         final  MainActivity activity = activityTestRule.getActivity();
-        //activity.setTheme(R.style.Theme_MaterialComponents_Light);
-        bottomNavigation = activity.findViewById(R.id.bottom_nav);
-
-
-
         final Resources res = activity.getResources();
+        bottomNavigation = activity.findViewById(R.id.bottom_nav);
         menuStringContent = new HashMap<>(MENU_CONTENT_ITEM_ID.length);
         menuStringContent.put(R.id.home_nav,res.getString(R.string.homeNav));
         menuStringContent.put(R.id.search_nav,res.getString(R.string.searchNav));
@@ -65,6 +66,8 @@ public class MainActivityBottomNavTest {
     @Test
     @SmallTest
     public void testAddItemsWithoutMenuInflation() {
+        //Test to see if there is Menu
+        //To do this by adding Items and removing them
         BottomNavigationView navigation = new BottomNavigationView(activityTestRule.getActivity());
         activityTestRule.getActivity().setContentView(navigation);
         navigation.getMenu().add("Item1");
