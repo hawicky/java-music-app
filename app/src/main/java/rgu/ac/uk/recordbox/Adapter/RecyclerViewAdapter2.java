@@ -1,9 +1,11 @@
 //recycle view for home_frag displaying all the saved songs
 package rgu.ac.uk.recordbox.Adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,12 +42,31 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter {
         CircleImageView image;
         TextView mAlbumText;
         TextView mArtistNameText;
+        ImageButton mImageButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.artist_img);
             mAlbumText = itemView.findViewById(R.id.album_name);
             mArtistNameText = itemView.findViewById(R.id.artist_name);
+            mImageButton = itemView.findViewById(R.id.imageButton6);
+            //adding song from search to savedSongs
+            mImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String song = mAlbumText.getText().toString();
+                    String artist = mArtistNameText.getText().toString();
+                    Log.d("Song", song);
+                    Log.d("Artist", artist);
+                    int position = OurData2.getPosition(song, artist);
+                    if(position !=-1){
+                        OurData2.albumT.remove(position);
+                        OurData2.artistN.remove(position);
+                        Log.d("remove", "Remove successful");
+                        
+                    }
+                }
+            });
         }
 
         public void bindView(int position){
