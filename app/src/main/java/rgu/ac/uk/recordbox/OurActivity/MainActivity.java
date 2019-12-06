@@ -36,7 +36,7 @@ import java.util.Map;
 
 import rgu.ac.uk.recordbox.Fragment.home_frag;
 import rgu.ac.uk.recordbox.Fragment.search_frag;
-import rgu.ac.uk.recordbox.OurData.OurData;
+import rgu.ac.uk.recordbox.OurData.OurData3;
 import rgu.ac.uk.recordbox.R;
 import rgu.ac.uk.recordbox.jsonObjects.Items;
 
@@ -222,16 +222,16 @@ public class MainActivity extends AppCompatActivity {
 
                                     //automated output
                                     //clearing display
-                                    OurData.albumT.clear();
-                                    OurData.artistN.clear();
+                                    OurData3.albumT.clear();
+                                    OurData3.artistN.clear();
                                     for(Items it: allItemsData){
                                         String songN = it.name;
                                         String artistN = it.allArtistName.get(0).name;
                                         String result = "Song: " + songN + " Artist: " + artistN;
                                         Log.d("FINAL", result);
-                                        //OurData.artistN.clear();
-                                        OurData.artistN.add(artistN);
-                                        OurData.albumT.add(songN);
+                                        //OurData3.artistN.clear();
+                                        OurData3.artistN.add(artistN);
+                                        OurData3.albumT.add(songN);
 
                                         //iterating through all artists (optional for future implementation)
                                         //for(artistName artName : it.allArtistName){

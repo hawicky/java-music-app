@@ -31,29 +31,6 @@ public class home_frag extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        //recycler view
-        //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Post Malone", "Stoney"));
-        //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "21 Savage", "Issa Album"));
-       /* exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Twenty One Pilots", "Trench"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Ed Sheeran", "X"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 9", "Line 6"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
-        exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
-        */
-       //exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, "Line 5", "Line 6"));
-
-        //mRecyclerView = rootView.findViewById(R.id.recyclerView);
-        //mRecyclerView.setHasFixedSize(true);
-        //mLayoutManager = new LinearLayoutManager(getContext());
-        //mAdapter = new ExampleAdapter(exampleList);
-
-        //mRecyclerView.setLayoutManager(mLayoutManager);
-        //mRecyclerView.setAdapter(mAdapter);
-
-
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         RecyclerViewAdapter2 adapter = new RecyclerViewAdapter2();

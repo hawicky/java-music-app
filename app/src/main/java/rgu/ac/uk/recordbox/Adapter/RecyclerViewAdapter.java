@@ -1,3 +1,4 @@
+//recycle view for search_frag displaying all the results of the search querry
 package rgu.ac.uk.recordbox.Adapter;
 
 import android.util.Log;
@@ -11,7 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import rgu.ac.uk.recordbox.OurData.OurData;
+import rgu.ac.uk.recordbox.OurData.OurData2;
+import rgu.ac.uk.recordbox.OurData.OurData3;
 import rgu.ac.uk.recordbox.R;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter {
@@ -32,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return OurData.albumT.size();
+        return OurData3.albumT.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -57,24 +59,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
                     String artist = mArtistNameText.getText().toString();
                     Log.d("Song", song);
                     Log.d("Artist", artist);
-                    OurData.albumT.add(song);
-                    OurData.artistN.add(artist);
-
-                    //home_frag.exampleList.add(new AlbumRecyclerView(R.drawable.ic_album, song, artist));
-
-
-                    //String entries = String.valueOf(home_frag.exampleList.size());
-                    //Log.d("number of entries", entries);
-
+                    OurData2.albumT.add(song);
+                    OurData2.artistN.add(artist);
                 }
             });
         }
 
         public void bindView(int position){
-            //mAlbumText.setText(OurData.albumTitle[position]);
-            //mArtistNameText.setText(OurData.artistName[position]);
-            mAlbumText.setText(OurData.albumT.get(position));
-            mArtistNameText.setText(OurData.artistN.get(position));
+            //mAlbumText.setText(OurData3.albumTitle[position]);
+            //mArtistNameText.setText(OurData3.artistName[position]);
+            mAlbumText.setText(OurData3.albumT.get(position));
+            mArtistNameText.setText(OurData3.artistN.get(position));
         }
 
         public void onClick(View view){
