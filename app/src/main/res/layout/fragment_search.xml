@@ -20,34 +20,36 @@
 
     <EditText
         android:id="@+id/searchKey"
-        android:layout_width="318dp"
-        android:layout_height="64dp"
+        android:layout_width="264dp"
+        android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/searchview_rounded"
         android:iconifiedByDefault="false"
         android:queryHint="@string/search_hint"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.389"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
 
         android:id="@+id/submitButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
         android:background="@drawable/searchview_rounded"
         android:text="@string/submit"
-        app:layout_constraintTop_toBottomOf="@+id/searchKey" />
+        app:layout_constraintTop_toRightOf="@+id/searchKey"
+        tools:layout_editor_absoluteX="297dp"
+        tools:layout_editor_absoluteY="77dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="384dp"
-        android:layout_height="367dp"
+        android:layout_width="373dp"
+        android:layout_height="560dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submitButton" />
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
@@ -10,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/Contact"
         android:textColor="@color/colorOrange"
@@ -24,52 +25,54 @@
 
     <EditText
         android:id="@+id/nameBox"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="315dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="148dp"
         android:hint="@string/name_hint"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/messageBox"
-        android:layout_width="293dp"
-        android:layout_height="53dp"
+        android:layout_width="317dp"
+        android:layout_height="98dp"
         android:ems="10"
         android:hint="@string/Message"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
     <EditText
         android:id="@+id/emailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/messageBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectText" />
 
     <EditText
         android:id="@+id/subjectText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="@string/subject"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/messageBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameBox"
-        app:layout_constraintVertical_bias="0.181" />
+        app:layout_constraintVertical_bias="0.088" />
 
     <TextView
         android:id="@+id/textView2"
@@ -77,9 +80,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="@string/Thanks"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@android:color/black"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/messageBox" />
 
@@ -87,7 +91,7 @@
         android:id="@+id/button"
         android:layout_width="88dp"
         android:layout_height="38dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="152dp"
         android:background="@color/colorOrange"
         android:shadowColor="#000000"
         android:text="@string/Send"
